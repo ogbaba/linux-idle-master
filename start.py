@@ -276,14 +276,17 @@ for appID, drops, value in games:
 				if sys.platform.startswith('win32'):
 					ctypes.windll.kernel32.SetConsoleTitleA("Idle Master - Idling " + getPlainAppName(appID) + " [" + str(dropCountInt) + " remaining]")
 		except:
-			if maxFail>0:
-				logging.warning("Error checking if drops are done, number of tries remaining: " + str(maxFail))
-				maxFail-=1
-			else:
-				# Suspend operations until Steam can be reached.
-				chillOut(appID)
-				maxFail+=1
-				break
+                        stillHaveDrops=0
+                        continue
+			#if maxFail>0:
+			#	logging.warning("Error checking if drops are done, number of tries remaining: " + str(maxFail))
+			#	maxFail-=1
+			#else:
+			#	# Suspend operations until Steam can be reached.
+			#	chillOut(appID)
+			#	maxFail+=1
+			#	break
+                        #       # The lines commented above break the game loop
 
 	idleClose(appID)
 	logging.warning(Fore.GREEN + "Successfully completed idling cards for " + getAppName(appID) + Fore.RESET)

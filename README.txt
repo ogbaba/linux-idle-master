@@ -1,7 +1,11 @@
 AUTHORS:
 
-jshackles, Stumpokapow, Michael Noble.
+jshackles, Stumpokapow, Michael Noble, Baptiste Pouget.
 
+NOTES:
+I quickly fixed the software because it got stuck after idling a single game,
+some other functionnalities I don't use may be broken.
+Baptiste Pouget
 
 REQUIREMENTS:
 
